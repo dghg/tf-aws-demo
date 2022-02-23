@@ -5,6 +5,12 @@ terraform {
 		  version = "~> 4.0.0"
 	  }
 	}
+
+	backend "s3" {
+		bucket = "terraform-state-dghg"
+		key ="terraform.tfstate"
+		region = "ap-northeast-2"
+	}
 }
 
 // Configure Provider
